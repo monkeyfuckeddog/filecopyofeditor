@@ -1,0 +1,31 @@
+netcore的url拼接
+http://localhost:63417/api/editor/userlogin
+
+去匿名字符串：
+1.数据交换使用json，unity端到服务器是整个json，方便做类映射，就不会出现
+	var username = Request.Query["username"];
+	或者直接把query里面的键值对直接映射到对应的json类
+2.取数据的接口应支持泛型操作，不返回jsondata，直接返回对象，这样使用的
+就是username属性或者字段，不会是匿名字符串
+
+3.使用EF+Sqlite作为最终存储方案。Redis没有Sqlite方便
+
+
+备忘录：
+1.连接字符串配置化
+2.
+
+
+InsertCsvTableContent
+InsertCsvTableContentForPost
+GetAllTableContent
+
+
+EditorUtils.UpdateData
+EditorUtils.DeleteData
+
+EditorUtils.GetTableStr 函数还要，返回的数据是csv，但是要从数据库读取
+
+除此之EditorManager.cs中也要排查
+
+多累
